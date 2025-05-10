@@ -1,6 +1,7 @@
 import MainNav from "@/components/MainNav";
 import AnimatedSection from "@/components/AnimatedSection";
 import ServiceCard from "@/components/ServiceCard";
+import Footer from "@/components/common/Footer";
 
 // Dummy data for services
 const services = [

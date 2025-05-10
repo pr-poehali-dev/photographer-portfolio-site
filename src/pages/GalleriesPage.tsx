@@ -3,6 +3,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import GalleryCard from "@/components/GalleryCard";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/common/Footer";
 
 // Dummy data for gallery categories
 const galleryCategories = [

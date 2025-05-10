@@ -4,6 +4,7 @@ import GalleryCard from "@/components/GalleryCard";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/common/Footer";
 
 // Dummy data for slider
 const sliderImages = [

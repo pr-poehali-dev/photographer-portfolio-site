@@ -1,6 +1,7 @@
 import MainNav from "@/components/MainNav";
 import AnimatedSection from "@/components/AnimatedSection";
 import BlogPost from "@/components/BlogPost";
+import Footer from "@/components/common/Footer";
 
 // Dummy data for blog posts
 const blogPosts = [
