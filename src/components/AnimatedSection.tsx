@@ -1,34 +1,33 @@
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  direction?: 'up' | 'left' | 'right' | 'none';
+  direction?: "up" | "left" | "right" | "none";
 }
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ 
-  children, 
-  className, 
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  children,
+  className,
   delay = 0,
-  direction = 'up'
+  direction = "up",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const getAnimationClass = () => {
     if (!isVisible) return "opacity-0";
-    
+
     switch (direction) {
-      case 'up':
+      case "up":
         return "animate-fadeIn";
-      case 'left':
+      case "left":
         return "animate-slideInLeft";
-      case 'right':
+      case "right":
         return "animate-slideInRight";
-      case 'none':
+      case "none":
         return "opacity-100 transition-opacity duration-500";
       default:
         return "animate-fadeIn";
@@ -47,9 +46,9 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       },
       {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.1,
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -64,16 +63,12 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   }, [delay]);
 
   return (
-    <div 
+    <div
       ref={sectionRef}
-      className={cn(
-        "opacity-0",
-        getAnimationClass(),
-        className
-      )}
-      style={{ 
+      className={cn("opacity-0", getAnimationClass(), className)}
+      style={{
         animationDelay: `${delay}ms`,
-        animationFillMode: 'forwards'
+        animationFillMode: "forwards",
       }}
     >
       {children}
