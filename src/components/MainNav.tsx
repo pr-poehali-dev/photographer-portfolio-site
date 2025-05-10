@@ -44,9 +44,9 @@ const MainNav: React.FC<MainNavProps> = ({ className }) => {
             ФОТОМАСТЕР
           </Link>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile/Tablet Menu Button */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="lg:hidden text-white focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle navigation menu"
           >
@@ -54,7 +54,7 @@ const MainNav: React.FC<MainNavProps> = ({ className }) => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <NavLink to="/">Главная</NavLink>
             <NavLink to="/galleries">Галерея</NavLink>
             <NavLink to="/about">Обо мне</NavLink>
@@ -64,10 +64,10 @@ const MainNav: React.FC<MainNavProps> = ({ className }) => {
           </nav>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile/Tablet Navigation Overlay */}
         <div
           className={cn(
-            "md:hidden fixed inset-0 bg-dark/95 backdrop-blur-md transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-8",
+            "lg:hidden fixed inset-0 bg-dark/95 backdrop-blur-md transition-all duration-300 ease-in-out flex flex-col items-center justify-center gap-8",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none -translate-y-5",

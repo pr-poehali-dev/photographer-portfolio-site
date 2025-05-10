@@ -63,7 +63,7 @@ const HomePage = () => {
       <MainNav />
 
       {/* Hero Section with Slider */}
-      <section id="hero" className="h-screen">
+      <section id="hero" className="h-screen pt-0">
         <HomeSlider slides={sliderImages} />
       </section>
 

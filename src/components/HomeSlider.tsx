@@ -140,23 +140,6 @@ const HomeSlider: React.FC<HomeSliderProps> = ({
           <Icon name="ChevronRight" className="h-5 w-5 md:h-6 md:w-6" />
         </Button>
       </div>
-
-      {/* Pagination Indicators */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={cn(
-              "w-3 h-3 rounded-full transition-all duration-300",
-              index === activeIndex
-                ? "bg-gold w-8"
-                : "bg-white/50 hover:bg-white/80",
-            )}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
