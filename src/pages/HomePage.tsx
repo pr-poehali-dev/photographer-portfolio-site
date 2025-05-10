@@ -3,8 +3,10 @@ import MainNav from '@/components/MainNav';
 import HomeSlider from '@/components/HomeSlider';
 import GalleryCard from '@/components/GalleryCard';
 import AnimatedSection from '@/components/AnimatedSection';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
-// Dummpy data for slider
+// Dummy data for slider
 const sliderImages = [
   {
     url: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
@@ -85,6 +87,12 @@ const HomePage = () => {
               />
             ))}
           </div>
+
+          <AnimatedSection className="text-center mt-12">
+            <Button asChild className="border-gold text-gold hover:bg-gold hover:text-dark">
+              <Link to="/galleries">Смотреть все галереи</Link>
+            </Button>
+          </AnimatedSection>
         </div>
       </section>
       
@@ -113,7 +121,7 @@ const HomePage = () => {
                 Для меня фотография — это не просто работа, а искусство передачи эмоций и историй через визуальные образы. 
                 Каждый проект — это новый вызов и возможность создать что-то особенное.
               </p>
-              <div className="flex flex-wrap gap-6 text-center">
+              <div className="flex flex-wrap gap-6 text-center mb-8">
                 <div className="flex-1">
                   <span className="text-gold text-3xl font-playfair">10+</span>
                   <p className="text-white/60 text-sm">Лет опыта</p>
@@ -127,6 +135,9 @@ const HomePage = () => {
                   <p className="text-white/60 text-sm">Наград</p>
                 </div>
               </div>
+              <Button asChild className="border-gold text-gold hover:bg-gold hover:text-dark">
+                <Link to="/about">Подробнее обо мне</Link>
+              </Button>
             </AnimatedSection>
           </div>
         </div>
